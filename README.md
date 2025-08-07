@@ -30,7 +30,7 @@ digitalxc_project/
 
 ### 1. Clone the Repository
 
-```bash
+
 git clone <repo-url>
 cd digitalxc_project
 If git is not installed, download from https://git-scm.com
@@ -57,9 +57,6 @@ Also, in superset_config.py:
 
 SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://your_username:your_password@localhost:5432/superset"
 5. Set Environment Variable
-powershell
-Copy
-Edit
 $env:SUPERSET_CONFIG_PATH = "C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\superset_config.py"
 6. Initialize Superset Metadata DB
 
