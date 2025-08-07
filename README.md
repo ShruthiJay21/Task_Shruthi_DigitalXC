@@ -36,28 +36,17 @@ cd digitalxc_project
 If git is not installed, download from https://git-scm.com
 
 2. Create and Activate Virtual Environment
-bash
-Copy
-Edit
 python -m venv env
 .\env\Scripts\activate   # For Windows
+
 3. Install Requirements
-bash
-Copy
-Edit
 pip install -r requirements.txt
 If not using requirements.txt, manually install:
 
-bash
-Copy
-Edit
 pip install apache-superset psycopg2-binary
 4. Set Up PostgreSQL Database
 Create a PostgreSQL database and user. Update your .env file with credentials:
 
-ini
-Copy
-Edit
 POSTGRES_USER=your_username
 POSTGRES_PASSWORD=your_password
 POSTGRES_DB=superset
@@ -65,9 +54,7 @@ POSTGRES_HOST=localhost
 POSTGRES_PORT=5432
 Also, in superset_config.py:
 
-python
-Copy
-Edit
+
 SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://your_username:your_password@localhost:5432/superset"
 5. Set Environment Variable
 powershell
@@ -75,16 +62,12 @@ Copy
 Edit
 $env:SUPERSET_CONFIG_PATH = "C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\superset_config.py"
 6. Initialize Superset Metadata DB
-bash
-Copy
-Edit
+
 superset db upgrade
 superset fab create-admin
 superset init
 7. Start Superset
-bash
-Copy
-Edit
+
 superset run -p 8088 --with-threads --reload --debugger
 Access Superset at: http://localhost:8088
 
