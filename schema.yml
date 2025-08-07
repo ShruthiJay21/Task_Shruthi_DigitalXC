@@ -1,0 +1,14 @@
+# models/staging/schema.yml
+version: 2
+
+models:
+  - name: stg_raw_data
+    description: "Staging model for raw input data"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: created_at
+        tests:
+          - not_null

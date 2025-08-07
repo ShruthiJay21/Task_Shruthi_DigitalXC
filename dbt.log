@@ -1,0 +1,1773 @@
+[0m18:15:55.804745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9DAFE790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9D81D850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9D81DFD0>]}
+
+
+============================== 18:15:55.804745 | ec7dec31-b89a-4ad1-911c-03e1e2dc9b5a ==============================
+[0m18:15:55.804745 [info ] [MainThread]: Running with dbt=1.10.6
+[0m18:15:55.804745 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project\\logs', 'profiles_dir': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:15:57.361236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ec7dec31-b89a-4ad1-911c-03e1e2dc9b5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9C3DC990>]}
+[0m18:15:57.413009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ec7dec31-b89a-4ad1-911c-03e1e2dc9b5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D991C8610>]}
+[0m18:15:57.413009 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:15:58.147730 [debug] [MainThread]: checksum: f6e4baf4de20596ffb9d14e6ef805989eb0e1950dedc3cc83d03f20aa023904c, vars: {}, profile: , target: , version: 1.10.6
+[0m18:15:58.147730 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:15:58.147730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ec7dec31-b89a-4ad1-911c-03e1e2dc9b5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9E3BC3D0>]}
+[0m18:15:59.553824 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.digitalxc_project.example
+[0m18:15:59.570006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ec7dec31-b89a-4ad1-911c-03e1e2dc9b5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9E971AD0>]}
+[0m18:15:59.644959 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:15:59.660647 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:15:59.929223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ec7dec31-b89a-4ad1-911c-03e1e2dc9b5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9F0435D0>]}
+[0m18:15:59.929223 [info ] [MainThread]: Found 2 models, 3 data tests, 434 macros
+[0m18:15:59.929223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec7dec31-b89a-4ad1-911c-03e1e2dc9b5a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9DB149D0>]}
+[0m18:15:59.946196 [info ] [MainThread]: 
+[0m18:15:59.947160 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:15:59.948173 [info ] [MainThread]: 
+[0m18:15:59.949549 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:15:59.955544 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard'
+[0m18:16:00.667422 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard"
+[0m18:16:00.667422 [debug] [ThreadPool]: On list_itsm_dashboard: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:16:00.667422 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:16:00.850221 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "shruthi"
+
+[0m18:16:00.941139 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:16:00.941139 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m18:16:00.956739 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m18:16:00.956739 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m18:16:00.956739 [debug] [ThreadPool]: On list_itsm_dashboard: No close available on handle
+[0m18:16:00.956739 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:16:00.956739 [debug] [MainThread]: Connection 'list_itsm_dashboard' was properly closed.
+[0m18:16:00.956739 [info ] [MainThread]: 
+[0m18:16:00.956739 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 1.01 seconds (1.01s).
+[0m18:16:00.956739 [error] [MainThread]: Encountered an error:
+Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "shruthi"
+  
+[0m18:16:00.956739 [debug] [MainThread]: Command `python -m dbt.cli.main run` failed at 18:16:00.956739 after 5.27 seconds
+[0m18:16:00.956739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9DB35890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9DAF4E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015D9DB66DD0>]}
+[0m18:16:00.956739 [debug] [MainThread]: Flushing usage events
+[0m18:16:01.934013 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:17:49.524514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251638FE750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002515F8FA210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002516395BD10>]}
+
+
+============================== 18:17:49.531490 | bcdeb392-d02a-4b24-90a0-f73f6a7e6b8e ==============================
+[0m18:17:49.531490 [info ] [MainThread]: Running with dbt=1.10.6
+[0m18:17:49.533478 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:17:49.787930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bcdeb392-d02a-4b24-90a0-f73f6a7e6b8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025164330710>]}
+[0m18:17:49.849737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bcdeb392-d02a-4b24-90a0-f73f6a7e6b8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002515EFC8CD0>]}
+[0m18:17:49.849737 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:17:50.506974 [debug] [MainThread]: checksum: f6e4baf4de20596ffb9d14e6ef805989eb0e1950dedc3cc83d03f20aa023904c, vars: {}, profile: , target: , version: 1.10.6
+[0m18:17:50.616809 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m18:17:50.632437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'bcdeb392-d02a-4b24-90a0-f73f6a7e6b8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002516207E450>]}
+[0m18:17:51.886658 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.digitalxc_project.example
+[0m18:17:51.904325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bcdeb392-d02a-4b24-90a0-f73f6a7e6b8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025164949310>]}
+[0m18:17:51.974754 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:17:51.974754 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:17:52.051296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bcdeb392-d02a-4b24-90a0-f73f6a7e6b8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025164E7B850>]}
+[0m18:17:52.051296 [info ] [MainThread]: Found 2 models, 3 data tests, 434 macros
+[0m18:17:52.051296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bcdeb392-d02a-4b24-90a0-f73f6a7e6b8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002516499EA90>]}
+[0m18:17:52.051296 [info ] [MainThread]: 
+[0m18:17:52.051296 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:17:52.051296 [info ] [MainThread]: 
+[0m18:17:52.051296 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:17:52.063610 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard'
+[0m18:17:52.760349 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard"
+[0m18:17:52.761346 [debug] [ThreadPool]: On list_itsm_dashboard: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:17:52.762343 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:17:52.954858 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.195 seconds
+[0m18:17:52.954858 [debug] [ThreadPool]: On list_itsm_dashboard: Close
+[0m18:17:52.954858 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_itsm_dashboard, now create_itsm_dashboard_analytics)
+[0m18:17:52.954858 [debug] [ThreadPool]: Creating schema "database: "itsm_dashboard"
+schema: "analytics"
+"
+[0m18:17:52.954858 [debug] [ThreadPool]: Using postgres connection "create_itsm_dashboard_analytics"
+[0m18:17:52.954858 [debug] [ThreadPool]: On create_itsm_dashboard_analytics: BEGIN
+[0m18:17:52.954858 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:17:53.022015 [debug] [ThreadPool]: SQL status: BEGIN in 0.060 seconds
+[0m18:17:53.022015 [debug] [ThreadPool]: Using postgres connection "create_itsm_dashboard_analytics"
+[0m18:17:53.022015 [debug] [ThreadPool]: On create_itsm_dashboard_analytics: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "create_itsm_dashboard_analytics"} */
+create schema if not exists "analytics"
+[0m18:17:53.225010 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.208 seconds
+[0m18:17:53.240582 [debug] [ThreadPool]: On create_itsm_dashboard_analytics: COMMIT
+[0m18:17:53.240582 [debug] [ThreadPool]: Using postgres connection "create_itsm_dashboard_analytics"
+[0m18:17:53.240582 [debug] [ThreadPool]: On create_itsm_dashboard_analytics: COMMIT
+[0m18:17:53.240582 [debug] [ThreadPool]: SQL status: COMMIT in 0.003 seconds
+[0m18:17:53.240582 [debug] [ThreadPool]: On create_itsm_dashboard_analytics: Close
+[0m18:17:53.240582 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard_analytics'
+[0m18:17:53.256155 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:17:53.256155 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: BEGIN
+[0m18:17:53.256155 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:17:53.309857 [debug] [ThreadPool]: SQL status: BEGIN in 0.050 seconds
+[0m18:17:53.310866 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:17:53.311801 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard_analytics"} */
+select
+      'itsm_dashboard' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m18:17:53.428600 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.116 seconds
+[0m18:17:53.429611 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: ROLLBACK
+[0m18:17:53.430668 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: Close
+[0m18:17:53.436585 [debug] [MainThread]: Using postgres connection "master"
+[0m18:17:53.437582 [debug] [MainThread]: On master: BEGIN
+[0m18:17:53.438336 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:17:53.491906 [debug] [MainThread]: SQL status: BEGIN in 0.054 seconds
+[0m18:17:53.492962 [debug] [MainThread]: Using postgres connection "master"
+[0m18:17:53.493958 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:17:53.554619 [debug] [MainThread]: SQL status: SELECT 0 in 0.060 seconds
+[0m18:17:53.556570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bcdeb392-d02a-4b24-90a0-f73f6a7e6b8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025164E378D0>]}
+[0m18:17:53.557594 [debug] [MainThread]: On master: ROLLBACK
+[0m18:17:53.558596 [debug] [MainThread]: Using postgres connection "master"
+[0m18:17:53.560588 [debug] [MainThread]: On master: BEGIN
+[0m18:17:53.561608 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m18:17:53.562581 [debug] [MainThread]: On master: COMMIT
+[0m18:17:53.564161 [debug] [MainThread]: Using postgres connection "master"
+[0m18:17:53.564161 [debug] [MainThread]: On master: COMMIT
+[0m18:17:53.565202 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:17:53.566208 [debug] [MainThread]: On master: Close
+[0m18:17:53.670803 [debug] [Thread-1 (]: Began running node model.digitalxc_project.stg_raw_data
+[0m18:17:53.671375 [info ] [Thread-1 (]: 1 of 2 START sql view model analytics.stg_raw_data ............................. [RUN]
+[0m18:17:53.671375 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.digitalxc_project.stg_raw_data'
+[0m18:17:53.671375 [debug] [Thread-1 (]: Began compiling node model.digitalxc_project.stg_raw_data
+[0m18:17:53.671375 [debug] [Thread-1 (]: Writing injected SQL for node "model.digitalxc_project.stg_raw_data"
+[0m18:17:53.685429 [debug] [Thread-1 (]: Began executing node model.digitalxc_project.stg_raw_data
+[0m18:17:53.724311 [debug] [Thread-1 (]: Writing runtime sql for node "model.digitalxc_project.stg_raw_data"
+[0m18:17:53.727233 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:17:53.727233 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: BEGIN
+[0m18:17:53.728230 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:17:53.771197 [debug] [Thread-1 (]: SQL status: BEGIN in 0.049 seconds
+[0m18:17:53.771197 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:17:53.771197 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+
+  create view "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/stg_raw_data.sql
+with source as (
+    select * from raw_data_source -- actual table in your DB
+)
+
+select
+    id,
+    name,
+    created_at::timestamp as created_at,
+    status
+from source
+  );
+[0m18:17:53.851906 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "raw_data_source" does not exist
+LINE 9:     select * from raw_data_source -- actual table in your DB
+                          ^
+
+[0m18:17:53.852901 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: ROLLBACK
+[0m18:17:53.853898 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: Close
+[0m18:17:53.866956 [debug] [Thread-1 (]: Database Error in model stg_raw_data (models\staging\stg_raw_data.sql)
+  relation "raw_data_source" does not exist
+  LINE 9:     select * from raw_data_source -- actual table in your DB
+                            ^
+  compiled code at target\run\digitalxc_project\models\staging\stg_raw_data.sql
+[0m18:17:53.866956 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bcdeb392-d02a-4b24-90a0-f73f6a7e6b8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251651F6DD0>]}
+[0m18:17:53.866956 [error] [Thread-1 (]: 1 of 2 ERROR creating sql view model analytics.stg_raw_data .................... [[31mERROR[0m in 0.20s]
+[0m18:17:53.866956 [debug] [Thread-1 (]: Finished running node model.digitalxc_project.stg_raw_data
+[0m18:17:53.866956 [debug] [Thread-7 (]: Marking all children of 'model.digitalxc_project.stg_raw_data' to be skipped because of status 'error'.  Reason: Database Error in model stg_raw_data (models\staging\stg_raw_data.sql)
+  relation "raw_data_source" does not exist
+  LINE 9:     select * from raw_data_source -- actual table in your DB
+                            ^
+  compiled code at target\run\digitalxc_project\models\staging\stg_raw_data.sql.
+[0m18:17:53.866956 [debug] [Thread-3 (]: Began running node model.digitalxc_project.final_transformed_model
+[0m18:17:53.866956 [info ] [Thread-3 (]: 2 of 2 SKIP relation analytics.final_transformed_model ......................... [[33mSKIP[0m]
+[0m18:17:53.883615 [debug] [Thread-3 (]: Finished running node model.digitalxc_project.final_transformed_model
+[0m18:17:53.886350 [debug] [MainThread]: Using postgres connection "master"
+[0m18:17:53.887664 [debug] [MainThread]: On master: BEGIN
+[0m18:17:53.889185 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:17:53.940743 [debug] [MainThread]: SQL status: BEGIN in 0.052 seconds
+[0m18:17:53.941741 [debug] [MainThread]: On master: COMMIT
+[0m18:17:53.942737 [debug] [MainThread]: Using postgres connection "master"
+[0m18:17:53.942737 [debug] [MainThread]: On master: COMMIT
+[0m18:17:53.943795 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:17:53.944856 [debug] [MainThread]: On master: Close
+[0m18:17:53.945794 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:17:53.946789 [debug] [MainThread]: Connection 'create_itsm_dashboard_analytics' was properly closed.
+[0m18:17:53.947258 [debug] [MainThread]: Connection 'list_itsm_dashboard_analytics' was properly closed.
+[0m18:17:53.947258 [debug] [MainThread]: Connection 'model.digitalxc_project.stg_raw_data' was properly closed.
+[0m18:17:53.948627 [info ] [MainThread]: 
+[0m18:17:53.949481 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 1.90 seconds (1.90s).
+[0m18:17:53.952057 [debug] [MainThread]: Command end result
+[0m18:17:53.977197 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:17:53.987737 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:17:53.996693 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\run_results.json
+[0m18:17:53.996693 [info ] [MainThread]: 
+[0m18:17:53.998762 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m18:17:53.999758 [info ] [MainThread]: 
+[0m18:17:54.001672 [error] [MainThread]: [31mFailure in model stg_raw_data (models\staging\stg_raw_data.sql)[0m
+[0m18:17:54.003636 [error] [MainThread]:   Database Error in model stg_raw_data (models\staging\stg_raw_data.sql)
+  relation "raw_data_source" does not exist
+  LINE 9:     select * from raw_data_source -- actual table in your DB
+                            ^
+  compiled code at target\run\digitalxc_project\models\staging\stg_raw_data.sql
+[0m18:17:54.004684 [info ] [MainThread]: 
+[0m18:17:54.006688 [info ] [MainThread]:   compiled code at target\compiled\digitalxc_project\models\staging\stg_raw_data.sql
+[0m18:17:54.008738 [info ] [MainThread]: 
+[0m18:17:54.009916 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 NO-OP=0 TOTAL=2
+[0m18:17:54.014005 [debug] [MainThread]: Command `python -m dbt.cli.main run` failed at 18:17:54.014005 after 4.61 seconds
+[0m18:17:54.014005 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251638F4FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025163938A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025163939C90>]}
+[0m18:17:54.014005 [debug] [MainThread]: Flushing usage events
+[0m18:17:54.976369 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:25:39.975240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6D7FEB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6B975910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6DC599D0>]}
+
+
+============================== 18:25:39.975240 | 1a852c66-7ee6-4da5-99b0-9f0e7fd8dd0d ==============================
+[0m18:25:39.975240 [info ] [MainThread]: Running with dbt=1.10.6
+[0m18:25:39.975240 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:25:40.273223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1a852c66-7ee6-4da5-99b0-9f0e7fd8dd0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6E013A10>]}
+[0m18:25:40.347107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1a852c66-7ee6-4da5-99b0-9f0e7fd8dd0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB68FC92D0>]}
+[0m18:25:40.350053 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:25:41.056277 [debug] [MainThread]: checksum: f6e4baf4de20596ffb9d14e6ef805989eb0e1950dedc3cc83d03f20aa023904c, vars: {}, profile: , target: , version: 1.10.6
+[0m18:25:41.422532 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m18:25:41.422532 [debug] [MainThread]: Partial parsing: updated file: digitalxc_project://models\staging\stg_raw_data.sql
+[0m18:25:41.873088 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.digitalxc_project.example
+[0m18:25:41.873088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1a852c66-7ee6-4da5-99b0-9f0e7fd8dd0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6B3C4110>]}
+[0m18:25:41.955955 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:25:41.974890 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:25:42.038342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1a852c66-7ee6-4da5-99b0-9f0e7fd8dd0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6E0AC550>]}
+[0m18:25:42.038342 [info ] [MainThread]: Found 2 models, 3 data tests, 434 macros
+[0m18:25:42.038342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1a852c66-7ee6-4da5-99b0-9f0e7fd8dd0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6E56CBD0>]}
+[0m18:25:42.038342 [info ] [MainThread]: 
+[0m18:25:42.038342 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:25:42.038342 [info ] [MainThread]: 
+[0m18:25:42.038342 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:25:42.038342 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard'
+[0m18:25:42.804787 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard"
+[0m18:25:42.804787 [debug] [ThreadPool]: On list_itsm_dashboard: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:25:42.804787 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:25:42.854767 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.058 seconds
+[0m18:25:42.870734 [debug] [ThreadPool]: On list_itsm_dashboard: Close
+[0m18:25:42.873923 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard_analytics'
+[0m18:25:42.880937 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:25:42.880937 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: BEGIN
+[0m18:25:42.880937 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:25:42.932044 [debug] [ThreadPool]: SQL status: BEGIN in 0.053 seconds
+[0m18:25:42.932044 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:25:42.937959 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard_analytics"} */
+select
+      'itsm_dashboard' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m18:25:42.937959 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.009 seconds
+[0m18:25:42.937959 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: ROLLBACK
+[0m18:25:42.937959 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: Close
+[0m18:25:42.954408 [debug] [MainThread]: Using postgres connection "master"
+[0m18:25:42.954408 [debug] [MainThread]: On master: BEGIN
+[0m18:25:42.954408 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:25:43.004781 [debug] [MainThread]: SQL status: BEGIN in 0.052 seconds
+[0m18:25:43.004781 [debug] [MainThread]: Using postgres connection "master"
+[0m18:25:43.004781 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:25:43.021299 [debug] [MainThread]: SQL status: SELECT 0 in 0.010 seconds
+[0m18:25:43.021299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1a852c66-7ee6-4da5-99b0-9f0e7fd8dd0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6EAB5490>]}
+[0m18:25:43.021299 [debug] [MainThread]: On master: ROLLBACK
+[0m18:25:43.021299 [debug] [MainThread]: Using postgres connection "master"
+[0m18:25:43.021299 [debug] [MainThread]: On master: BEGIN
+[0m18:25:43.021299 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:25:43.021299 [debug] [MainThread]: On master: COMMIT
+[0m18:25:43.021299 [debug] [MainThread]: Using postgres connection "master"
+[0m18:25:43.021299 [debug] [MainThread]: On master: COMMIT
+[0m18:25:43.021299 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:25:43.021299 [debug] [MainThread]: On master: Close
+[0m18:25:43.037892 [debug] [Thread-1 (]: Began running node model.digitalxc_project.stg_raw_data
+[0m18:25:43.037892 [info ] [Thread-1 (]: 1 of 2 START sql view model analytics.stg_raw_data ............................. [RUN]
+[0m18:25:43.037892 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.digitalxc_project.stg_raw_data'
+[0m18:25:43.037892 [debug] [Thread-1 (]: Began compiling node model.digitalxc_project.stg_raw_data
+[0m18:25:43.054429 [debug] [Thread-1 (]: Writing injected SQL for node "model.digitalxc_project.stg_raw_data"
+[0m18:25:43.054429 [debug] [Thread-1 (]: Began executing node model.digitalxc_project.stg_raw_data
+[0m18:25:43.097983 [debug] [Thread-1 (]: Writing runtime sql for node "model.digitalxc_project.stg_raw_data"
+[0m18:25:43.099934 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:25:43.100989 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: BEGIN
+[0m18:25:43.100989 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:25:43.141347 [debug] [Thread-1 (]: SQL status: BEGIN in 0.050 seconds
+[0m18:25:43.141347 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:25:43.153878 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+
+  create view "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from itsm_data
+),
+
+renamed as (
+    select
+        inc_number as incident_id,
+        inc_business_service as business_service,
+        inc_category as category,
+        inc_priority as priority,
+        inc_sla_due as sla_due,
+        inc_sys_created_on as created_on,
+        inc_resolved_at as resolved_at,
+        inc_assigned_to as assigned_to,
+        inc_state as state,
+        inc_cmdb_ci as cmdb_ci,
+        inc_caller_id as caller_id,
+        inc_short_description as short_description,
+        inc_assignment_group as assignment_group,
+        inc_close_code as close_code,
+        inc_close_notes as close_notes
+    from source
+)
+
+select * from renamed
+  );
+[0m18:25:43.429198 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.289 seconds
+[0m18:25:43.444869 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:25:43.444869 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+alter table "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp" rename to "stg_raw_data"
+[0m18:25:43.444869 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m18:25:43.460485 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: COMMIT
+[0m18:25:43.460485 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:25:43.460485 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: COMMIT
+[0m18:25:43.508811 [debug] [Thread-1 (]: SQL status: COMMIT in 0.034 seconds
+[0m18:25:43.508811 [debug] [Thread-1 (]: Applying DROP to: "itsm_dashboard"."analytics"."stg_raw_data__dbt_backup"
+[0m18:25:43.520490 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:25:43.521537 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+drop view if exists "itsm_dashboard"."analytics"."stg_raw_data__dbt_backup" cascade
+[0m18:25:43.524085 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m18:25:43.527120 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: Close
+[0m18:25:43.530116 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1a852c66-7ee6-4da5-99b0-9f0e7fd8dd0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6E97C810>]}
+[0m18:25:43.532060 [info ] [Thread-1 (]: 1 of 2 OK created sql view model analytics.stg_raw_data ........................ [[32mCREATE VIEW[0m in 0.49s]
+[0m18:25:43.533058 [debug] [Thread-1 (]: Finished running node model.digitalxc_project.stg_raw_data
+[0m18:25:43.534877 [debug] [Thread-3 (]: Began running node model.digitalxc_project.final_transformed_model
+[0m18:25:43.535923 [info ] [Thread-3 (]: 2 of 2 START sql view model analytics.final_transformed_model .................. [RUN]
+[0m18:25:43.536874 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.digitalxc_project.final_transformed_model'
+[0m18:25:43.537939 [debug] [Thread-3 (]: Began compiling node model.digitalxc_project.final_transformed_model
+[0m18:25:43.537939 [debug] [Thread-3 (]: Writing injected SQL for node "model.digitalxc_project.final_transformed_model"
+[0m18:25:43.537939 [debug] [Thread-3 (]: Began executing node model.digitalxc_project.final_transformed_model
+[0m18:25:43.537939 [debug] [Thread-3 (]: Writing runtime sql for node "model.digitalxc_project.final_transformed_model"
+[0m18:25:43.537939 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:25:43.537939 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: BEGIN
+[0m18:25:43.537939 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:25:43.588715 [debug] [Thread-3 (]: SQL status: BEGIN in 0.050 seconds
+[0m18:25:43.588715 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:25:43.588715 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+
+  create view "itsm_dashboard"."analytics"."final_transformed_model__dbt_tmp"
+    
+    
+  as (
+    -- models/marts/final_transformed_model.sql
+with staged as (
+    select * from "itsm_dashboard"."analytics"."stg_raw_data"
+)
+
+select
+    id,
+    upper(name) as name_caps,
+    status,
+    created_at
+from staged
+where status = 'active'
+  );
+[0m18:25:43.603462 [debug] [Thread-3 (]: Postgres adapter: Postgres error: column "id" does not exist
+LINE 13:     id,
+             ^
+
+[0m18:25:43.604460 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: ROLLBACK
+[0m18:25:43.605937 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: Close
+[0m18:25:43.620422 [debug] [Thread-3 (]: Database Error in model final_transformed_model (models\staging\marts\final_transformed_model.sql)
+  column "id" does not exist
+  LINE 13:     id,
+               ^
+  compiled code at target\run\digitalxc_project\models\staging\marts\final_transformed_model.sql
+[0m18:25:43.621421 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1a852c66-7ee6-4da5-99b0-9f0e7fd8dd0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6E4911D0>]}
+[0m18:25:43.622417 [error] [Thread-3 (]: 2 of 2 ERROR creating sql view model analytics.final_transformed_model ......... [[31mERROR[0m in 0.08s]
+[0m18:25:43.624452 [debug] [Thread-3 (]: Finished running node model.digitalxc_project.final_transformed_model
+[0m18:25:43.625409 [debug] [Thread-7 (]: Marking all children of 'model.digitalxc_project.final_transformed_model' to be skipped because of status 'error'.  Reason: Database Error in model final_transformed_model (models\staging\marts\final_transformed_model.sql)
+  column "id" does not exist
+  LINE 13:     id,
+               ^
+  compiled code at target\run\digitalxc_project\models\staging\marts\final_transformed_model.sql.
+[0m18:25:43.627980 [debug] [MainThread]: Using postgres connection "master"
+[0m18:25:43.628992 [debug] [MainThread]: On master: BEGIN
+[0m18:25:43.628992 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:25:43.781939 [debug] [MainThread]: SQL status: BEGIN in 0.164 seconds
+[0m18:25:43.781939 [debug] [MainThread]: On master: COMMIT
+[0m18:25:43.781939 [debug] [MainThread]: Using postgres connection "master"
+[0m18:25:43.781939 [debug] [MainThread]: On master: COMMIT
+[0m18:25:43.781939 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:25:43.781939 [debug] [MainThread]: On master: Close
+[0m18:25:43.797561 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:25:43.797561 [debug] [MainThread]: Connection 'list_itsm_dashboard' was properly closed.
+[0m18:25:43.797561 [debug] [MainThread]: Connection 'list_itsm_dashboard_analytics' was properly closed.
+[0m18:25:43.797561 [debug] [MainThread]: Connection 'model.digitalxc_project.stg_raw_data' was properly closed.
+[0m18:25:43.797561 [debug] [MainThread]: Connection 'model.digitalxc_project.final_transformed_model' was properly closed.
+[0m18:25:43.797561 [info ] [MainThread]: 
+[0m18:25:43.797561 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 1.76 seconds (1.76s).
+[0m18:25:43.797561 [debug] [MainThread]: Command end result
+[0m18:25:43.825057 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:25:43.841909 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:25:43.848828 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\run_results.json
+[0m18:25:43.849956 [info ] [MainThread]: 
+[0m18:25:43.851997 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m18:25:43.853083 [info ] [MainThread]: 
+[0m18:25:43.855222 [error] [MainThread]: [31mFailure in model final_transformed_model (models\staging\marts\final_transformed_model.sql)[0m
+[0m18:25:43.857270 [error] [MainThread]:   Database Error in model final_transformed_model (models\staging\marts\final_transformed_model.sql)
+  column "id" does not exist
+  LINE 13:     id,
+               ^
+  compiled code at target\run\digitalxc_project\models\staging\marts\final_transformed_model.sql
+[0m18:25:43.858263 [info ] [MainThread]: 
+[0m18:25:43.860314 [info ] [MainThread]:   compiled code at target\compiled\digitalxc_project\models\staging\marts\final_transformed_model.sql
+[0m18:25:43.861254 [info ] [MainThread]: 
+[0m18:25:43.862251 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:25:43.865710 [debug] [MainThread]: Command `python -m dbt.cli.main run` failed at 18:25:43.865710 after 4.05 seconds
+[0m18:25:43.865710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6D7F4FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6DC655D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CB6DC67750>]}
+[0m18:25:43.865710 [debug] [MainThread]: Flushing usage events
+[0m18:25:44.967297 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:28:21.366476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213400FE990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021340135A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002133FE1E090>]}
+
+
+============================== 18:28:21.366476 | f726e28d-c960-4dbb-b4f8-93cbfb91f8ff ==============================
+[0m18:28:21.366476 [info ] [MainThread]: Running with dbt=1.10.6
+[0m18:28:21.366476 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:28:21.616224 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f726e28d-c960-4dbb-b4f8-93cbfb91f8ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021340149710>]}
+[0m18:28:21.691017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f726e28d-c960-4dbb-b4f8-93cbfb91f8ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002133B7C8990>]}
+[0m18:28:21.694121 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:28:22.350011 [debug] [MainThread]: checksum: f6e4baf4de20596ffb9d14e6ef805989eb0e1950dedc3cc83d03f20aa023904c, vars: {}, profile: , target: , version: 1.10.6
+[0m18:28:22.710510 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m18:28:22.710510 [debug] [MainThread]: Partial parsing: updated file: digitalxc_project://models\staging\marts\final_transformed_model.sql
+[0m18:28:22.943714 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.digitalxc_project.example
+[0m18:28:22.943714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f726e28d-c960-4dbb-b4f8-93cbfb91f8ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002134118EB10>]}
+[0m18:28:23.022815 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:28:23.022815 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:28:23.132331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f726e28d-c960-4dbb-b4f8-93cbfb91f8ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021340D9FF10>]}
+[0m18:28:23.132331 [info ] [MainThread]: Found 2 models, 3 data tests, 434 macros
+[0m18:28:23.132331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f726e28d-c960-4dbb-b4f8-93cbfb91f8ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213412D9590>]}
+[0m18:28:23.132331 [info ] [MainThread]: 
+[0m18:28:23.132331 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:28:23.132331 [info ] [MainThread]: 
+[0m18:28:23.132331 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:28:23.149002 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard'
+[0m18:28:23.913085 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard"
+[0m18:28:23.913085 [debug] [ThreadPool]: On list_itsm_dashboard: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:28:23.913085 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:28:23.969190 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.053 seconds
+[0m18:28:23.969190 [debug] [ThreadPool]: On list_itsm_dashboard: Close
+[0m18:28:23.974419 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard_analytics'
+[0m18:28:23.974419 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:28:23.974419 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: BEGIN
+[0m18:28:23.974419 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:28:24.024079 [debug] [ThreadPool]: SQL status: BEGIN in 0.046 seconds
+[0m18:28:24.024079 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:28:24.024079 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard_analytics"} */
+select
+      'itsm_dashboard' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m18:28:24.040641 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.009 seconds
+[0m18:28:24.040641 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: ROLLBACK
+[0m18:28:24.040641 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: Close
+[0m18:28:24.040641 [debug] [MainThread]: Using postgres connection "master"
+[0m18:28:24.040641 [debug] [MainThread]: On master: BEGIN
+[0m18:28:24.040641 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:28:24.207877 [debug] [MainThread]: SQL status: BEGIN in 0.158 seconds
+[0m18:28:24.208943 [debug] [MainThread]: Using postgres connection "master"
+[0m18:28:24.209998 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:28:24.226039 [debug] [MainThread]: SQL status: SELECT 1 in 0.028 seconds
+[0m18:28:24.226039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f726e28d-c960-4dbb-b4f8-93cbfb91f8ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021340DBBB10>]}
+[0m18:28:24.241667 [debug] [MainThread]: On master: ROLLBACK
+[0m18:28:24.243618 [debug] [MainThread]: Using postgres connection "master"
+[0m18:28:24.245303 [debug] [MainThread]: On master: BEGIN
+[0m18:28:24.245303 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m18:28:24.245303 [debug] [MainThread]: On master: COMMIT
+[0m18:28:24.245303 [debug] [MainThread]: Using postgres connection "master"
+[0m18:28:24.245303 [debug] [MainThread]: On master: COMMIT
+[0m18:28:24.245303 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:28:24.245303 [debug] [MainThread]: On master: Close
+[0m18:28:24.245303 [debug] [Thread-1 (]: Began running node model.digitalxc_project.stg_raw_data
+[0m18:28:24.245303 [info ] [Thread-1 (]: 1 of 2 START sql view model analytics.stg_raw_data ............................. [RUN]
+[0m18:28:24.261358 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.digitalxc_project.stg_raw_data'
+[0m18:28:24.261358 [debug] [Thread-1 (]: Began compiling node model.digitalxc_project.stg_raw_data
+[0m18:28:24.261358 [debug] [Thread-1 (]: Writing injected SQL for node "model.digitalxc_project.stg_raw_data"
+[0m18:28:24.261358 [debug] [Thread-1 (]: Began executing node model.digitalxc_project.stg_raw_data
+[0m18:28:24.310705 [debug] [Thread-1 (]: Writing runtime sql for node "model.digitalxc_project.stg_raw_data"
+[0m18:28:24.312719 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:28:24.312719 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: BEGIN
+[0m18:28:24.313699 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:28:24.355364 [debug] [Thread-1 (]: SQL status: BEGIN in 0.047 seconds
+[0m18:28:24.355364 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:28:24.355364 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+
+  create view "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from itsm_data
+),
+
+renamed as (
+    select
+        inc_number as incident_id,
+        inc_business_service as business_service,
+        inc_category as category,
+        inc_priority as priority,
+        inc_sla_due as sla_due,
+        inc_sys_created_on as created_on,
+        inc_resolved_at as resolved_at,
+        inc_assigned_to as assigned_to,
+        inc_state as state,
+        inc_cmdb_ci as cmdb_ci,
+        inc_caller_id as caller_id,
+        inc_short_description as short_description,
+        inc_assignment_group as assignment_group,
+        inc_close_code as close_code,
+        inc_close_notes as close_notes
+    from source
+)
+
+select * from renamed
+  );
+[0m18:28:24.552942 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.190 seconds
+[0m18:28:24.552942 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:28:24.552942 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+alter table "itsm_dashboard"."analytics"."stg_raw_data" rename to "stg_raw_data__dbt_backup"
+[0m18:28:24.552942 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:28:24.571467 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:28:24.572468 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+alter table "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp" rename to "stg_raw_data"
+[0m18:28:24.573453 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:28:24.588174 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: COMMIT
+[0m18:28:24.588174 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:28:24.588174 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: COMMIT
+[0m18:28:24.588174 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:28:24.588174 [debug] [Thread-1 (]: Applying DROP to: "itsm_dashboard"."analytics"."stg_raw_data__dbt_backup"
+[0m18:28:24.603801 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:28:24.603801 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+drop view if exists "itsm_dashboard"."analytics"."stg_raw_data__dbt_backup" cascade
+[0m18:28:24.819199 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.221 seconds
+[0m18:28:24.819199 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: Close
+[0m18:28:24.819199 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f726e28d-c960-4dbb-b4f8-93cbfb91f8ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002134177F790>]}
+[0m18:28:24.834779 [info ] [Thread-1 (]: 1 of 2 OK created sql view model analytics.stg_raw_data ........................ [[32mCREATE VIEW[0m in 0.56s]
+[0m18:28:24.834779 [debug] [Thread-1 (]: Finished running node model.digitalxc_project.stg_raw_data
+[0m18:28:24.834779 [debug] [Thread-3 (]: Began running node model.digitalxc_project.final_transformed_model
+[0m18:28:24.834779 [info ] [Thread-3 (]: 2 of 2 START sql view model analytics.final_transformed_model .................. [RUN]
+[0m18:28:24.834779 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.digitalxc_project.final_transformed_model'
+[0m18:28:24.834779 [debug] [Thread-3 (]: Began compiling node model.digitalxc_project.final_transformed_model
+[0m18:28:24.834779 [debug] [Thread-3 (]: Writing injected SQL for node "model.digitalxc_project.final_transformed_model"
+[0m18:28:24.834779 [debug] [Thread-3 (]: Began executing node model.digitalxc_project.final_transformed_model
+[0m18:28:24.834779 [debug] [Thread-3 (]: Writing runtime sql for node "model.digitalxc_project.final_transformed_model"
+[0m18:28:24.834779 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:28:24.851322 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: BEGIN
+[0m18:28:24.852369 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:28:24.890445 [debug] [Thread-3 (]: SQL status: BEGIN in 0.048 seconds
+[0m18:28:24.890445 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:28:24.890445 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+
+  create view "itsm_dashboard"."analytics"."final_transformed_model__dbt_tmp"
+    
+    
+  as (
+    -- models/marts/final_transformed_model.sql
+
+with staged as (
+    select * from "itsm_dashboard"."analytics"."stg_raw_data"
+)
+
+select
+    id,
+    upper(name) as name_caps,
+    status,
+    created_at
+from staged
+where status = 'active'
+  );
+[0m18:28:24.890445 [debug] [Thread-3 (]: Postgres adapter: Postgres error: column "id" does not exist
+LINE 14:     id,
+             ^
+
+[0m18:28:24.904811 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: ROLLBACK
+[0m18:28:24.905945 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: Close
+[0m18:28:24.921614 [debug] [Thread-3 (]: Database Error in model final_transformed_model (models\staging\marts\final_transformed_model.sql)
+  column "id" does not exist
+  LINE 14:     id,
+               ^
+  compiled code at target\run\digitalxc_project\models\staging\marts\final_transformed_model.sql
+[0m18:28:24.922662 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f726e28d-c960-4dbb-b4f8-93cbfb91f8ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021341012650>]}
+[0m18:28:24.923597 [error] [Thread-3 (]: 2 of 2 ERROR creating sql view model analytics.final_transformed_model ......... [[31mERROR[0m in 0.09s]
+[0m18:28:24.926176 [debug] [Thread-3 (]: Finished running node model.digitalxc_project.final_transformed_model
+[0m18:28:24.927239 [debug] [Thread-7 (]: Marking all children of 'model.digitalxc_project.final_transformed_model' to be skipped because of status 'error'.  Reason: Database Error in model final_transformed_model (models\staging\marts\final_transformed_model.sql)
+  column "id" does not exist
+  LINE 14:     id,
+               ^
+  compiled code at target\run\digitalxc_project\models\staging\marts\final_transformed_model.sql.
+[0m18:28:24.930011 [debug] [MainThread]: Using postgres connection "master"
+[0m18:28:24.931052 [debug] [MainThread]: On master: BEGIN
+[0m18:28:24.931052 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:28:24.972550 [debug] [MainThread]: SQL status: BEGIN in 0.046 seconds
+[0m18:28:24.972550 [debug] [MainThread]: On master: COMMIT
+[0m18:28:24.972550 [debug] [MainThread]: Using postgres connection "master"
+[0m18:28:24.972550 [debug] [MainThread]: On master: COMMIT
+[0m18:28:24.972550 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:28:24.972550 [debug] [MainThread]: On master: Close
+[0m18:28:24.972550 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:28:24.972550 [debug] [MainThread]: Connection 'list_itsm_dashboard' was properly closed.
+[0m18:28:24.972550 [debug] [MainThread]: Connection 'list_itsm_dashboard_analytics' was properly closed.
+[0m18:28:24.972550 [debug] [MainThread]: Connection 'model.digitalxc_project.stg_raw_data' was properly closed.
+[0m18:28:24.972550 [debug] [MainThread]: Connection 'model.digitalxc_project.final_transformed_model' was properly closed.
+[0m18:28:24.972550 [info ] [MainThread]: 
+[0m18:28:24.987566 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 1.84 seconds (1.84s).
+[0m18:28:24.990599 [debug] [MainThread]: Command end result
+[0m18:28:25.014158 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:28:25.019193 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:28:25.023237 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\run_results.json
+[0m18:28:25.023237 [info ] [MainThread]: 
+[0m18:28:25.023237 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m18:28:25.023237 [info ] [MainThread]: 
+[0m18:28:25.023237 [error] [MainThread]: [31mFailure in model final_transformed_model (models\staging\marts\final_transformed_model.sql)[0m
+[0m18:28:25.023237 [error] [MainThread]:   Database Error in model final_transformed_model (models\staging\marts\final_transformed_model.sql)
+  column "id" does not exist
+  LINE 14:     id,
+               ^
+  compiled code at target\run\digitalxc_project\models\staging\marts\final_transformed_model.sql
+[0m18:28:25.023237 [info ] [MainThread]: 
+[0m18:28:25.038104 [info ] [MainThread]:   compiled code at target\compiled\digitalxc_project\models\staging\marts\final_transformed_model.sql
+[0m18:28:25.039242 [info ] [MainThread]: 
+[0m18:28:25.040346 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:28:25.040346 [debug] [MainThread]: Command `python -m dbt.cli.main run` failed at 18:28:25.040346 after 3.77 seconds
+[0m18:28:25.040346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213400F5050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021340165790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021340167C90>]}
+[0m18:28:25.040346 [debug] [MainThread]: Flushing usage events
+[0m18:28:26.298096 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:30:38.108093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A882CFE810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A882A1DA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A882A1D950>]}
+
+
+============================== 18:30:38.116094 | 038e429b-e4e8-43ee-a695-c14dbbea31ca ==============================
+[0m18:30:38.116094 [info ] [MainThread]: Running with dbt=1.10.6
+[0m18:30:38.119019 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m18:30:38.376751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '038e429b-e4e8-43ee-a695-c14dbbea31ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A8836B3710>]}
+[0m18:30:38.428856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '038e429b-e4e8-43ee-a695-c14dbbea31ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A8FE3C9610>]}
+[0m18:30:38.428856 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:30:39.092450 [debug] [MainThread]: checksum: f6e4baf4de20596ffb9d14e6ef805989eb0e1950dedc3cc83d03f20aa023904c, vars: {}, profile: , target: , version: 1.10.6
+[0m18:30:39.460659 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m18:30:39.460659 [debug] [MainThread]: Partial parsing: updated file: digitalxc_project://models\staging\marts\final_transformed_model.sql
+[0m18:30:39.693997 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.digitalxc_project.example
+[0m18:30:39.693997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '038e429b-e4e8-43ee-a695-c14dbbea31ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A883E21B10>]}
+[0m18:30:39.776170 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:30:39.781324 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:30:39.889964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '038e429b-e4e8-43ee-a695-c14dbbea31ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A8839AE050>]}
+[0m18:30:39.890961 [info ] [MainThread]: Found 2 models, 3 data tests, 434 macros
+[0m18:30:39.892587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '038e429b-e4e8-43ee-a695-c14dbbea31ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A8839D77D0>]}
+[0m18:30:39.894543 [info ] [MainThread]: 
+[0m18:30:39.895603 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:30:39.896557 [info ] [MainThread]: 
+[0m18:30:39.899240 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:30:39.902178 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard'
+[0m18:30:40.663122 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard"
+[0m18:30:40.663122 [debug] [ThreadPool]: On list_itsm_dashboard: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:30:40.663122 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:30:40.721581 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.053 seconds
+[0m18:30:40.721581 [debug] [ThreadPool]: On list_itsm_dashboard: Close
+[0m18:30:40.721581 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard_analytics'
+[0m18:30:40.721581 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:30:40.721581 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: BEGIN
+[0m18:30:40.721581 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:30:40.786947 [debug] [ThreadPool]: SQL status: BEGIN in 0.050 seconds
+[0m18:30:40.786947 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:30:40.787942 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard_analytics"} */
+select
+      'itsm_dashboard' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m18:30:40.795435 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.008 seconds
+[0m18:30:40.795435 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: ROLLBACK
+[0m18:30:40.795435 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: Close
+[0m18:30:40.795435 [debug] [MainThread]: Using postgres connection "master"
+[0m18:30:40.795435 [debug] [MainThread]: On master: BEGIN
+[0m18:30:40.795435 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:30:40.842305 [debug] [MainThread]: SQL status: BEGIN in 0.049 seconds
+[0m18:30:40.842305 [debug] [MainThread]: Using postgres connection "master"
+[0m18:30:40.842305 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:30:40.857929 [debug] [MainThread]: SQL status: SELECT 1 in 0.010 seconds
+[0m18:30:40.857929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '038e429b-e4e8-43ee-a695-c14dbbea31ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A883D52A50>]}
+[0m18:30:40.857929 [debug] [MainThread]: On master: ROLLBACK
+[0m18:30:40.857929 [debug] [MainThread]: Using postgres connection "master"
+[0m18:30:40.857929 [debug] [MainThread]: On master: BEGIN
+[0m18:30:40.857929 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:30:40.857929 [debug] [MainThread]: On master: COMMIT
+[0m18:30:40.857929 [debug] [MainThread]: Using postgres connection "master"
+[0m18:30:40.873599 [debug] [MainThread]: On master: COMMIT
+[0m18:30:40.873599 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:30:40.873599 [debug] [MainThread]: On master: Close
+[0m18:30:40.873599 [debug] [Thread-1 (]: Began running node model.digitalxc_project.stg_raw_data
+[0m18:30:40.873599 [info ] [Thread-1 (]: 1 of 2 START sql view model analytics.stg_raw_data ............................. [RUN]
+[0m18:30:40.873599 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.digitalxc_project.stg_raw_data'
+[0m18:30:40.889218 [debug] [Thread-1 (]: Began compiling node model.digitalxc_project.stg_raw_data
+[0m18:30:40.889218 [debug] [Thread-1 (]: Writing injected SQL for node "model.digitalxc_project.stg_raw_data"
+[0m18:30:40.889218 [debug] [Thread-1 (]: Began executing node model.digitalxc_project.stg_raw_data
+[0m18:30:40.934587 [debug] [Thread-1 (]: Writing runtime sql for node "model.digitalxc_project.stg_raw_data"
+[0m18:30:40.935606 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:30:40.936593 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: BEGIN
+[0m18:30:40.937608 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:30:41.098233 [debug] [Thread-1 (]: SQL status: BEGIN in 0.161 seconds
+[0m18:30:41.099275 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:30:41.100286 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+
+  create view "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from itsm_data
+),
+
+renamed as (
+    select
+        inc_number as incident_id,
+        inc_business_service as business_service,
+        inc_category as category,
+        inc_priority as priority,
+        inc_sla_due as sla_due,
+        inc_sys_created_on as created_on,
+        inc_resolved_at as resolved_at,
+        inc_assigned_to as assigned_to,
+        inc_state as state,
+        inc_cmdb_ci as cmdb_ci,
+        inc_caller_id as caller_id,
+        inc_short_description as short_description,
+        inc_assignment_group as assignment_group,
+        inc_close_code as close_code,
+        inc_close_notes as close_notes
+    from source
+)
+
+select * from renamed
+  );
+[0m18:30:41.109413 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.008 seconds
+[0m18:30:41.115395 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:30:41.116533 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+alter table "itsm_dashboard"."analytics"."stg_raw_data" rename to "stg_raw_data__dbt_backup"
+[0m18:30:41.118529 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:30:41.121518 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:30:41.122515 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+alter table "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp" rename to "stg_raw_data"
+[0m18:30:41.123511 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:30:41.132559 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: COMMIT
+[0m18:30:41.132559 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:30:41.132559 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: COMMIT
+[0m18:30:41.163938 [debug] [Thread-1 (]: SQL status: COMMIT in 0.026 seconds
+[0m18:30:41.163938 [debug] [Thread-1 (]: Applying DROP to: "itsm_dashboard"."analytics"."stg_raw_data__dbt_backup"
+[0m18:30:41.179434 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:30:41.179434 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+drop view if exists "itsm_dashboard"."analytics"."stg_raw_data__dbt_backup" cascade
+[0m18:30:41.179434 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:30:41.179434 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: Close
+[0m18:30:41.179434 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '038e429b-e4e8-43ee-a695-c14dbbea31ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A884415AD0>]}
+[0m18:30:41.179434 [info ] [Thread-1 (]: 1 of 2 OK created sql view model analytics.stg_raw_data ........................ [[32mCREATE VIEW[0m in 0.31s]
+[0m18:30:41.179434 [debug] [Thread-1 (]: Finished running node model.digitalxc_project.stg_raw_data
+[0m18:30:41.179434 [debug] [Thread-3 (]: Began running node model.digitalxc_project.final_transformed_model
+[0m18:30:41.179434 [info ] [Thread-3 (]: 2 of 2 START sql view model analytics.final_transformed_model .................. [RUN]
+[0m18:30:41.195053 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.digitalxc_project.final_transformed_model'
+[0m18:30:41.195922 [debug] [Thread-3 (]: Began compiling node model.digitalxc_project.final_transformed_model
+[0m18:30:41.200640 [debug] [Thread-3 (]: Writing injected SQL for node "model.digitalxc_project.final_transformed_model"
+[0m18:30:41.200640 [debug] [Thread-3 (]: Began executing node model.digitalxc_project.final_transformed_model
+[0m18:30:41.200640 [debug] [Thread-3 (]: Writing runtime sql for node "model.digitalxc_project.final_transformed_model"
+[0m18:30:41.200640 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:30:41.200640 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: BEGIN
+[0m18:30:41.200640 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:30:41.246524 [debug] [Thread-3 (]: SQL status: BEGIN in 0.049 seconds
+[0m18:30:41.246524 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:30:41.246524 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+
+  create view "itsm_dashboard"."analytics"."final_transformed_model__dbt_tmp"
+    
+    
+  as (
+    with staged as (
+    select * from "itsm_dashboard"."analytics"."stg_raw_data"
+)
+
+select
+    incident_id,
+    upper(short_description) as short_description_caps,
+    state,
+    created_on
+from staged
+where state = 'active'
+  );
+[0m18:30:41.303300 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.053 seconds
+[0m18:30:41.320404 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:30:41.320404 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+alter table "itsm_dashboard"."analytics"."final_transformed_model__dbt_tmp" rename to "final_transformed_model"
+[0m18:30:41.320404 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:30:41.320404 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: COMMIT
+[0m18:30:41.320404 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:30:41.320404 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: COMMIT
+[0m18:30:41.330317 [debug] [Thread-3 (]: SQL status: COMMIT in 0.003 seconds
+[0m18:30:41.334357 [debug] [Thread-3 (]: Applying DROP to: "itsm_dashboard"."analytics"."final_transformed_model__dbt_backup"
+[0m18:30:41.335307 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:30:41.336260 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+drop view if exists "itsm_dashboard"."analytics"."final_transformed_model__dbt_backup" cascade
+[0m18:30:41.337258 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m18:30:41.339293 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: Close
+[0m18:30:41.339293 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '038e429b-e4e8-43ee-a695-c14dbbea31ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A884401D50>]}
+[0m18:30:41.341246 [info ] [Thread-3 (]: 2 of 2 OK created sql view model analytics.final_transformed_model ............. [[32mCREATE VIEW[0m in 0.14s]
+[0m18:30:41.343239 [debug] [Thread-3 (]: Finished running node model.digitalxc_project.final_transformed_model
+[0m18:30:41.344865 [debug] [MainThread]: Using postgres connection "master"
+[0m18:30:41.344865 [debug] [MainThread]: On master: BEGIN
+[0m18:30:41.344865 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:30:41.379625 [debug] [MainThread]: SQL status: BEGIN in 0.047 seconds
+[0m18:30:41.379625 [debug] [MainThread]: On master: COMMIT
+[0m18:30:41.394849 [debug] [MainThread]: Using postgres connection "master"
+[0m18:30:41.396845 [debug] [MainThread]: On master: COMMIT
+[0m18:30:41.397872 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:30:41.397872 [debug] [MainThread]: On master: Close
+[0m18:30:41.398837 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:30:41.399896 [debug] [MainThread]: Connection 'list_itsm_dashboard' was properly closed.
+[0m18:30:41.400871 [debug] [MainThread]: Connection 'list_itsm_dashboard_analytics' was properly closed.
+[0m18:30:41.400871 [debug] [MainThread]: Connection 'model.digitalxc_project.stg_raw_data' was properly closed.
+[0m18:30:41.402728 [debug] [MainThread]: Connection 'model.digitalxc_project.final_transformed_model' was properly closed.
+[0m18:30:41.402728 [info ] [MainThread]: 
+[0m18:30:41.404777 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 1.50 seconds (1.50s).
+[0m18:30:41.406724 [debug] [MainThread]: Command end result
+[0m18:30:41.430240 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:30:41.430240 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:30:41.430240 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\run_results.json
+[0m18:30:41.430240 [info ] [MainThread]: 
+[0m18:30:41.430240 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:30:41.445827 [info ] [MainThread]: 
+[0m18:30:41.446840 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:30:41.447678 [debug] [MainThread]: Command `python -m dbt.cli.main run` succeeded at 18:30:41.447678 after 3.43 seconds
+[0m18:30:41.447678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A882D35950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A882D35910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A882CF5110>]}
+[0m18:30:41.447678 [debug] [MainThread]: Flushing usage events
+[0m18:30:42.710525 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:47:19.620820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B88B029D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B88B2D050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B88B2D690>]}
+
+
+============================== 18:47:19.620820 | 7e3f4fa3-4b4a-4a74-8fca-2de18ce2f9ad ==============================
+[0m18:47:19.620820 [info ] [MainThread]: Running with dbt=1.10.6
+[0m18:47:19.620820 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:47:19.906746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7e3f4fa3-4b4a-4a74-8fca-2de18ce2f9ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B89502590>]}
+[0m18:47:19.953786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7e3f4fa3-4b4a-4a74-8fca-2de18ce2f9ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B841C9AD0>]}
+[0m18:47:19.969409 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:47:20.639111 [debug] [MainThread]: checksum: f6e4baf4de20596ffb9d14e6ef805989eb0e1950dedc3cc83d03f20aa023904c, vars: {}, profile: , target: , version: 1.10.6
+[0m18:47:20.976190 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:47:20.976190 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:47:20.991817 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.digitalxc_project.example
+[0m18:47:21.022179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7e3f4fa3-4b4a-4a74-8fca-2de18ce2f9ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B89A8AF90>]}
+[0m18:47:21.100821 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:47:21.100821 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:47:21.179199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7e3f4fa3-4b4a-4a74-8fca-2de18ce2f9ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B89BEC6D0>]}
+[0m18:47:21.180190 [info ] [MainThread]: Found 2 models, 3 data tests, 434 macros
+[0m18:47:21.182183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7e3f4fa3-4b4a-4a74-8fca-2de18ce2f9ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B89B57B50>]}
+[0m18:47:21.184176 [info ] [MainThread]: 
+[0m18:47:21.184633 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:47:21.185633 [info ] [MainThread]: 
+[0m18:47:21.187626 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:47:21.191773 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard'
+[0m18:47:21.969800 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard"
+[0m18:47:21.969800 [debug] [ThreadPool]: On list_itsm_dashboard: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:47:21.969800 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:47:22.032477 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.055 seconds
+[0m18:47:22.032477 [debug] [ThreadPool]: On list_itsm_dashboard: Close
+[0m18:47:22.032477 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard_analytics'
+[0m18:47:22.048148 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:47:22.048148 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: BEGIN
+[0m18:47:22.048148 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:47:22.100938 [debug] [ThreadPool]: SQL status: BEGIN in 0.052 seconds
+[0m18:47:22.100938 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:47:22.100938 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard_analytics"} */
+select
+      'itsm_dashboard' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m18:47:22.100938 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.008 seconds
+[0m18:47:22.116559 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: ROLLBACK
+[0m18:47:22.116559 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: Close
+[0m18:47:22.119440 [debug] [MainThread]: Using postgres connection "master"
+[0m18:47:22.119440 [debug] [MainThread]: On master: BEGIN
+[0m18:47:22.119440 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:47:22.284259 [debug] [MainThread]: SQL status: BEGIN in 0.158 seconds
+[0m18:47:22.285278 [debug] [MainThread]: Using postgres connection "master"
+[0m18:47:22.286289 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:47:22.304007 [debug] [MainThread]: SQL status: SELECT 2 in 0.025 seconds
+[0m18:47:22.304007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7e3f4fa3-4b4a-4a74-8fca-2de18ce2f9ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B894F3CD0>]}
+[0m18:47:22.304007 [debug] [MainThread]: On master: ROLLBACK
+[0m18:47:22.304007 [debug] [MainThread]: Using postgres connection "master"
+[0m18:47:22.304007 [debug] [MainThread]: On master: BEGIN
+[0m18:47:22.304007 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m18:47:22.304007 [debug] [MainThread]: On master: COMMIT
+[0m18:47:22.319539 [debug] [MainThread]: Using postgres connection "master"
+[0m18:47:22.319539 [debug] [MainThread]: On master: COMMIT
+[0m18:47:22.319539 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:47:22.319539 [debug] [MainThread]: On master: Close
+[0m18:47:22.319539 [debug] [Thread-1 (]: Began running node model.digitalxc_project.stg_raw_data
+[0m18:47:22.319539 [info ] [Thread-1 (]: 1 of 2 START sql view model analytics.stg_raw_data ............................. [RUN]
+[0m18:47:22.335164 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.digitalxc_project.stg_raw_data'
+[0m18:47:22.335164 [debug] [Thread-1 (]: Began compiling node model.digitalxc_project.stg_raw_data
+[0m18:47:22.335164 [debug] [Thread-1 (]: Writing injected SQL for node "model.digitalxc_project.stg_raw_data"
+[0m18:47:22.335164 [debug] [Thread-1 (]: Began executing node model.digitalxc_project.stg_raw_data
+[0m18:47:22.424732 [debug] [Thread-1 (]: Writing runtime sql for node "model.digitalxc_project.stg_raw_data"
+[0m18:47:22.426726 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:47:22.427723 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: BEGIN
+[0m18:47:22.428718 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:47:22.476493 [debug] [Thread-1 (]: SQL status: BEGIN in 0.049 seconds
+[0m18:47:22.476493 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:47:22.476493 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+
+  create view "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from itsm_data
+),
+
+renamed as (
+    select
+        inc_number as incident_id,
+        inc_business_service as business_service,
+        inc_category as category,
+        inc_priority as priority,
+        inc_sla_due as sla_due,
+        inc_sys_created_on as created_on,
+        inc_resolved_at as resolved_at,
+        inc_assigned_to as assigned_to,
+        inc_state as state,
+        inc_cmdb_ci as cmdb_ci,
+        inc_caller_id as caller_id,
+        inc_short_description as short_description,
+        inc_assignment_group as assignment_group,
+        inc_close_code as close_code,
+        inc_close_notes as close_notes
+    from source
+)
+
+select * from renamed
+  );
+[0m18:47:22.488297 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.009 seconds
+[0m18:47:22.495275 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:47:22.496272 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+alter table "itsm_dashboard"."analytics"."stg_raw_data" rename to "stg_raw_data__dbt_backup"
+[0m18:47:22.497471 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:47:22.500462 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:47:22.501459 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+alter table "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp" rename to "stg_raw_data"
+[0m18:47:22.502456 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:47:22.506518 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: COMMIT
+[0m18:47:22.506518 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:47:22.506518 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: COMMIT
+[0m18:47:22.522144 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m18:47:22.522144 [debug] [Thread-1 (]: Applying DROP to: "itsm_dashboard"."analytics"."stg_raw_data__dbt_backup"
+[0m18:47:22.522144 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:47:22.522144 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+drop view if exists "itsm_dashboard"."analytics"."stg_raw_data__dbt_backup" cascade
+[0m18:47:22.537817 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.004 seconds
+[0m18:47:22.537817 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: Close
+[0m18:47:22.537817 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7e3f4fa3-4b4a-4a74-8fca-2de18ce2f9ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B89578450>]}
+[0m18:47:22.537817 [info ] [Thread-1 (]: 1 of 2 OK created sql view model analytics.stg_raw_data ........................ [[32mCREATE VIEW[0m in 0.20s]
+[0m18:47:22.537817 [debug] [Thread-1 (]: Finished running node model.digitalxc_project.stg_raw_data
+[0m18:47:22.537817 [debug] [Thread-3 (]: Began running node model.digitalxc_project.final_transformed_model
+[0m18:47:22.537817 [info ] [Thread-3 (]: 2 of 2 START sql view model analytics.final_transformed_model .................. [RUN]
+[0m18:47:22.537817 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.digitalxc_project.final_transformed_model'
+[0m18:47:22.537817 [debug] [Thread-3 (]: Began compiling node model.digitalxc_project.final_transformed_model
+[0m18:47:22.556731 [debug] [Thread-3 (]: Writing injected SQL for node "model.digitalxc_project.final_transformed_model"
+[0m18:47:22.558722 [debug] [Thread-3 (]: Began executing node model.digitalxc_project.final_transformed_model
+[0m18:47:22.563768 [debug] [Thread-3 (]: Writing runtime sql for node "model.digitalxc_project.final_transformed_model"
+[0m18:47:22.564702 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:47:22.565699 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: BEGIN
+[0m18:47:22.566695 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:47:22.622158 [debug] [Thread-3 (]: SQL status: BEGIN in 0.056 seconds
+[0m18:47:22.623152 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:47:22.624142 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+
+  create view "itsm_dashboard"."analytics"."final_transformed_model__dbt_tmp"
+    
+    
+  as (
+    with staged as (
+    select * from "itsm_dashboard"."analytics"."stg_raw_data"
+)
+
+select
+    incident_id,
+    upper(short_description) as short_description_caps,
+    state,
+    created_on
+from staged
+where state = 'active'
+  );
+[0m18:47:22.648940 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.024 seconds
+[0m18:47:22.652970 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:47:22.654681 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+alter table "itsm_dashboard"."analytics"."final_transformed_model__dbt_tmp" rename to "final_transformed_model"
+[0m18:47:22.655102 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:47:22.656752 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: COMMIT
+[0m18:47:22.656752 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:47:22.656752 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: COMMIT
+[0m18:47:22.656752 [debug] [Thread-3 (]: SQL status: COMMIT in 0.003 seconds
+[0m18:47:22.656752 [debug] [Thread-3 (]: Applying DROP to: "itsm_dashboard"."analytics"."final_transformed_model__dbt_backup"
+[0m18:47:22.656752 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:47:22.668971 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+drop view if exists "itsm_dashboard"."analytics"."final_transformed_model__dbt_backup" cascade
+[0m18:47:22.668971 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m18:47:22.668971 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: Close
+[0m18:47:22.668971 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7e3f4fa3-4b4a-4a74-8fca-2de18ce2f9ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B8A001590>]}
+[0m18:47:22.668971 [info ] [Thread-3 (]: 2 of 2 OK created sql view model analytics.final_transformed_model ............. [[32mCREATE VIEW[0m in 0.13s]
+[0m18:47:22.668971 [debug] [Thread-3 (]: Finished running node model.digitalxc_project.final_transformed_model
+[0m18:47:22.668971 [debug] [MainThread]: Using postgres connection "master"
+[0m18:47:22.668971 [debug] [MainThread]: On master: BEGIN
+[0m18:47:22.668971 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:47:22.725950 [debug] [MainThread]: SQL status: BEGIN in 0.047 seconds
+[0m18:47:22.727008 [debug] [MainThread]: On master: COMMIT
+[0m18:47:22.727943 [debug] [MainThread]: Using postgres connection "master"
+[0m18:47:22.727943 [debug] [MainThread]: On master: COMMIT
+[0m18:47:22.728992 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:47:22.729999 [debug] [MainThread]: On master: Close
+[0m18:47:22.730968 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:47:22.730968 [debug] [MainThread]: Connection 'list_itsm_dashboard' was properly closed.
+[0m18:47:22.731936 [debug] [MainThread]: Connection 'list_itsm_dashboard_analytics' was properly closed.
+[0m18:47:22.732927 [debug] [MainThread]: Connection 'model.digitalxc_project.stg_raw_data' was properly closed.
+[0m18:47:22.732927 [debug] [MainThread]: Connection 'model.digitalxc_project.final_transformed_model' was properly closed.
+[0m18:47:22.733965 [info ] [MainThread]: 
+[0m18:47:22.734922 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 1.55 seconds (1.55s).
+[0m18:47:22.735830 [debug] [MainThread]: Command end result
+[0m18:47:22.754510 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:47:22.754510 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:47:22.770374 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\run_results.json
+[0m18:47:22.770374 [info ] [MainThread]: 
+[0m18:47:22.770374 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:47:22.770374 [info ] [MainThread]: 
+[0m18:47:22.770374 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:47:22.770374 [debug] [MainThread]: Command `python -m dbt.cli.main run` succeeded at 18:47:22.770374 after 3.25 seconds
+[0m18:47:22.770374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B888222D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B88AF5C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015B88AF7950>]}
+[0m18:47:22.770374 [debug] [MainThread]: Flushing usage events
+[0m18:47:25.917463 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:52:16.602587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA42906890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA4261E090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA4261EAD0>]}
+
+
+============================== 18:52:16.609565 | 281190ce-5a4c-48c6-82cb-19b4dc69de9f ==============================
+[0m18:52:16.609565 [info ] [MainThread]: Running with dbt=1.10.6
+[0m18:52:16.611556 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Admin\\Desktop\\DigitalXC_Task_Shruthi\\digitalxc_project\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:52:16.867025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '281190ce-5a4c-48c6-82cb-19b4dc69de9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA4333D210>]}
+[0m18:52:16.930288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '281190ce-5a4c-48c6-82cb-19b4dc69de9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA3DFCD810>]}
+[0m18:52:16.930288 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:52:17.689017 [debug] [MainThread]: checksum: f6e4baf4de20596ffb9d14e6ef805989eb0e1950dedc3cc83d03f20aa023904c, vars: {}, profile: , target: , version: 1.10.6
+[0m18:52:18.047070 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m18:52:18.047070 [debug] [MainThread]: Partial parsing: updated file: digitalxc_project://models\staging\marts\final_transformed_model.sql
+[0m18:52:18.314419 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.digitalxc_project.example
+[0m18:52:18.320214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '281190ce-5a4c-48c6-82cb-19b4dc69de9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA435934D0>]}
+[0m18:52:18.396907 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:52:18.396907 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:52:18.515597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '281190ce-5a4c-48c6-82cb-19b4dc69de9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA4359D450>]}
+[0m18:52:18.516583 [info ] [MainThread]: Found 2 models, 3 data tests, 434 macros
+[0m18:52:18.517581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '281190ce-5a4c-48c6-82cb-19b4dc69de9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA43AD9790>]}
+[0m18:52:18.519582 [info ] [MainThread]: 
+[0m18:52:18.521568 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:52:18.522597 [info ] [MainThread]: 
+[0m18:52:18.523645 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:52:18.528629 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard'
+[0m18:52:19.280158 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard"
+[0m18:52:19.280158 [debug] [ThreadPool]: On list_itsm_dashboard: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:52:19.280158 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:52:19.345458 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.054 seconds
+[0m18:52:19.345458 [debug] [ThreadPool]: On list_itsm_dashboard: Close
+[0m18:52:19.345458 [debug] [ThreadPool]: Acquiring new postgres connection 'list_itsm_dashboard_analytics'
+[0m18:52:19.345458 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:52:19.345458 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: BEGIN
+[0m18:52:19.345458 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:52:19.411210 [debug] [ThreadPool]: SQL status: BEGIN in 0.052 seconds
+[0m18:52:19.412327 [debug] [ThreadPool]: Using postgres connection "list_itsm_dashboard_analytics"
+[0m18:52:19.412327 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "list_itsm_dashboard_analytics"} */
+select
+      'itsm_dashboard' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'itsm_dashboard' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m18:52:19.412327 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.008 seconds
+[0m18:52:19.412327 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: ROLLBACK
+[0m18:52:19.412327 [debug] [ThreadPool]: On list_itsm_dashboard_analytics: Close
+[0m18:52:19.428511 [debug] [MainThread]: Using postgres connection "master"
+[0m18:52:19.428511 [debug] [MainThread]: On master: BEGIN
+[0m18:52:19.428511 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:52:19.478349 [debug] [MainThread]: SQL status: BEGIN in 0.051 seconds
+[0m18:52:19.478349 [debug] [MainThread]: Using postgres connection "master"
+[0m18:52:19.478349 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:52:19.502006 [debug] [MainThread]: SQL status: SELECT 2 in 0.012 seconds
+[0m18:52:19.505014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '281190ce-5a4c-48c6-82cb-19b4dc69de9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA440063D0>]}
+[0m18:52:19.505014 [debug] [MainThread]: On master: ROLLBACK
+[0m18:52:19.505923 [debug] [MainThread]: Using postgres connection "master"
+[0m18:52:19.506997 [debug] [MainThread]: On master: BEGIN
+[0m18:52:19.507916 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:52:19.508985 [debug] [MainThread]: On master: COMMIT
+[0m18:52:19.509911 [debug] [MainThread]: Using postgres connection "master"
+[0m18:52:19.509911 [debug] [MainThread]: On master: COMMIT
+[0m18:52:19.511909 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m18:52:19.512933 [debug] [MainThread]: On master: Close
+[0m18:52:19.524547 [debug] [Thread-1 (]: Began running node model.digitalxc_project.stg_raw_data
+[0m18:52:19.526541 [info ] [Thread-1 (]: 1 of 2 START sql view model analytics.stg_raw_data ............................. [RUN]
+[0m18:52:19.528551 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.digitalxc_project.stg_raw_data'
+[0m18:52:19.530525 [debug] [Thread-1 (]: Began compiling node model.digitalxc_project.stg_raw_data
+[0m18:52:19.538577 [debug] [Thread-1 (]: Writing injected SQL for node "model.digitalxc_project.stg_raw_data"
+[0m18:52:19.538577 [debug] [Thread-1 (]: Began executing node model.digitalxc_project.stg_raw_data
+[0m18:52:19.580287 [debug] [Thread-1 (]: Writing runtime sql for node "model.digitalxc_project.stg_raw_data"
+[0m18:52:19.580287 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:52:19.580287 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: BEGIN
+[0m18:52:19.580287 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:52:19.630933 [debug] [Thread-1 (]: SQL status: BEGIN in 0.055 seconds
+[0m18:52:19.630933 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:52:19.644546 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+
+  create view "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from itsm_data
+),
+
+renamed as (
+    select
+        inc_number as incident_id,
+        inc_business_service as business_service,
+        inc_category as category,
+        inc_priority as priority,
+        inc_sla_due as sla_due,
+        inc_sys_created_on as created_on,
+        inc_resolved_at as resolved_at,
+        inc_assigned_to as assigned_to,
+        inc_state as state,
+        inc_cmdb_ci as cmdb_ci,
+        inc_caller_id as caller_id,
+        inc_short_description as short_description,
+        inc_assignment_group as assignment_group,
+        inc_close_code as close_code,
+        inc_close_notes as close_notes
+    from source
+)
+
+select * from renamed
+  );
+[0m18:52:19.655582 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.010 seconds
+[0m18:52:19.662459 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:52:19.663455 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+alter table "itsm_dashboard"."analytics"."stg_raw_data" rename to "stg_raw_data__dbt_backup"
+[0m18:52:19.664452 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:52:19.668438 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:52:19.669436 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+alter table "itsm_dashboard"."analytics"."stg_raw_data__dbt_tmp" rename to "stg_raw_data"
+[0m18:52:19.670466 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:52:19.677882 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: COMMIT
+[0m18:52:19.677882 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:52:19.677882 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: COMMIT
+[0m18:52:19.677882 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m18:52:19.693511 [debug] [Thread-1 (]: Applying DROP to: "itsm_dashboard"."analytics"."stg_raw_data__dbt_backup"
+[0m18:52:19.693511 [debug] [Thread-1 (]: Using postgres connection "model.digitalxc_project.stg_raw_data"
+[0m18:52:19.693511 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.stg_raw_data"} */
+drop view if exists "itsm_dashboard"."analytics"."stg_raw_data__dbt_backup" cascade
+[0m18:52:19.693511 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.004 seconds
+[0m18:52:19.711236 [debug] [Thread-1 (]: On model.digitalxc_project.stg_raw_data: Close
+[0m18:52:19.714666 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '281190ce-5a4c-48c6-82cb-19b4dc69de9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA43FDDB50>]}
+[0m18:52:19.715650 [info ] [Thread-1 (]: 1 of 2 OK created sql view model analytics.stg_raw_data ........................ [[32mCREATE VIEW[0m in 0.18s]
+[0m18:52:19.716644 [debug] [Thread-1 (]: Finished running node model.digitalxc_project.stg_raw_data
+[0m18:52:19.718637 [debug] [Thread-3 (]: Began running node model.digitalxc_project.final_transformed_model
+[0m18:52:19.719633 [info ] [Thread-3 (]: 2 of 2 START sql view model analytics.final_transformed_model .................. [RUN]
+[0m18:52:19.720631 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.digitalxc_project.final_transformed_model'
+[0m18:52:19.721652 [debug] [Thread-3 (]: Began compiling node model.digitalxc_project.final_transformed_model
+[0m18:52:19.726225 [debug] [Thread-3 (]: Writing injected SQL for node "model.digitalxc_project.final_transformed_model"
+[0m18:52:19.729225 [debug] [Thread-3 (]: Began executing node model.digitalxc_project.final_transformed_model
+[0m18:52:19.735251 [debug] [Thread-3 (]: Writing runtime sql for node "model.digitalxc_project.final_transformed_model"
+[0m18:52:19.738188 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:52:19.739229 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: BEGIN
+[0m18:52:19.740296 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:52:19.779749 [debug] [Thread-3 (]: SQL status: BEGIN in 0.054 seconds
+[0m18:52:19.795925 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:52:19.796932 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+
+  create view "itsm_dashboard"."analytics"."final_transformed_model__dbt_tmp"
+    
+    
+  as (
+    with staged as (
+    select * from "itsm_dashboard"."analytics"."stg_raw_data"
+)
+
+select
+    incident_id,
+    upper(short_description) as short_description_caps,
+    state,
+    created_on
+from staged
+where state = 'Closed'
+  );
+[0m18:52:19.805904 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.008 seconds
+[0m18:52:19.808890 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:52:19.809886 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+alter table "itsm_dashboard"."analytics"."final_transformed_model__dbt_tmp" rename to "final_transformed_model"
+[0m18:52:19.811881 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:52:19.814916 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: COMMIT
+[0m18:52:19.815910 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:52:19.816864 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: COMMIT
+[0m18:52:19.820851 [debug] [Thread-3 (]: SQL status: COMMIT in 0.003 seconds
+[0m18:52:19.823902 [debug] [Thread-3 (]: Applying DROP to: "itsm_dashboard"."analytics"."final_transformed_model__dbt_backup"
+[0m18:52:19.824902 [debug] [Thread-3 (]: Using postgres connection "model.digitalxc_project.final_transformed_model"
+[0m18:52:19.825836 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: /* {"app": "dbt", "dbt_version": "1.10.6", "profile_name": "digitalxc_project", "target_name": "dev", "node_id": "model.digitalxc_project.final_transformed_model"} */
+drop view if exists "itsm_dashboard"."analytics"."final_transformed_model__dbt_backup" cascade
+[0m18:52:19.827738 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m18:52:19.829693 [debug] [Thread-3 (]: On model.digitalxc_project.final_transformed_model: Close
+[0m18:52:19.830627 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '281190ce-5a4c-48c6-82cb-19b4dc69de9f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA4398A890>]}
+[0m18:52:19.831692 [info ] [Thread-3 (]: 2 of 2 OK created sql view model analytics.final_transformed_model ............. [[32mCREATE VIEW[0m in 0.11s]
+[0m18:52:19.834007 [debug] [Thread-3 (]: Finished running node model.digitalxc_project.final_transformed_model
+[0m18:52:19.836002 [debug] [MainThread]: Using postgres connection "master"
+[0m18:52:19.836997 [debug] [MainThread]: On master: BEGIN
+[0m18:52:19.836997 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:52:19.889553 [debug] [MainThread]: SQL status: BEGIN in 0.052 seconds
+[0m18:52:19.892544 [debug] [MainThread]: On master: COMMIT
+[0m18:52:19.893531 [debug] [MainThread]: Using postgres connection "master"
+[0m18:52:19.894471 [debug] [MainThread]: On master: COMMIT
+[0m18:52:19.896467 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:52:19.896467 [debug] [MainThread]: On master: Close
+[0m18:52:19.897489 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:52:19.899069 [debug] [MainThread]: Connection 'list_itsm_dashboard' was properly closed.
+[0m18:52:19.899565 [debug] [MainThread]: Connection 'list_itsm_dashboard_analytics' was properly closed.
+[0m18:52:19.900570 [debug] [MainThread]: Connection 'model.digitalxc_project.stg_raw_data' was properly closed.
+[0m18:52:19.900570 [debug] [MainThread]: Connection 'model.digitalxc_project.final_transformed_model' was properly closed.
+[0m18:52:19.901600 [info ] [MainThread]: 
+[0m18:52:19.902563 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 1.38 seconds (1.38s).
+[0m18:52:19.905553 [debug] [MainThread]: Command end result
+[0m18:52:19.933336 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\manifest.json
+[0m18:52:19.939371 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\semantic_manifest.json
+[0m18:52:19.945969 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Admin\Desktop\DigitalXC_Task_Shruthi\digitalxc_project\target\run_results.json
+[0m18:52:19.945969 [info ] [MainThread]: 
+[0m18:52:19.945969 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:52:19.945969 [info ] [MainThread]: 
+[0m18:52:19.945969 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:52:19.945969 [debug] [MainThread]: Command `python -m dbt.cli.main run` succeeded at 18:52:19.945969 after 3.47 seconds
+[0m18:52:19.945969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA42957590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA42965150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CA42966910>]}
+[0m18:52:19.945969 [debug] [MainThread]: Flushing usage events
+[0m18:52:21.261996 [debug] [MainThread]: An error was encountered while trying to flush usage events

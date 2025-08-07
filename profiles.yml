@@ -1,0 +1,12 @@
+digitalxc_project:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost      # or your remote DB IP
+      user: postgres
+      password: admin123
+      port: 5432
+      dbname: itsm_dashboard
+      schema: analytics     # this is the schema dbt will write to
+      threads: 4
